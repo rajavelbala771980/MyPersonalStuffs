@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/2002/06/xhtml2/ http://www.w3.org/MarkUp/SCHEMA/xhtml2.xsd" xmlns:epub="http://www.idpf.org/2007/ops">
+<head>
+<link href="Styles/Style00.css" rel="stylesheet" type="text/css" />
+<link href="Styles/Style01.css" rel="stylesheet" type="text/css" />
+<link href="Styles/Style02.css" rel="stylesheet" type="text/css" />
+<link href="Styles/Style03.css" rel="stylesheet" type="text/css" />
+<style type="text/css" title="ibis-book">
+    #sbo-rt-content .chapter-number{font-weight:bold;font-size:8.3em;text-align:right;font-family:symbol}#sbo-rt-content .chapter-title{font-size:30pt;text-align:right}#sbo-rt-content h1,#sbo-rt-content .packt_head1{font-size:16pt;font-weight:bold}#sbo-rt-content h2,#sbo-rt-content .packt_head2{font-size:14pt;font-weight:bold}#sbo-rt-content h3,#sbo-rt-content .packt_head3{font-size:13pt;font-weight:bold}#sbo-rt-content h4,#sbo-rt-content .packt_head4{font-size:11pt;font-weight:normal;font-style:italic}#sbo-rt-content ul,#sbo-rt-content .packt_bullet{font-weight:normal;list-style-type:disc}#sbo-rt-content ol,#sbo-rt-content .packt_numbered{font-weight:normal}#sbo-rt-content .packt_normal{font-weight:normal}#sbo-rt-content code,#sbo-rt-content .packt_code,#sbo-rt-content .packt_codeblock,#sbo-rt-content pre{font-family:monospace;font-size:9pt;font-weight:normal;border-left:1px solid black;margin-left:20px;padding-left:5px;display:block;margin-bottom:.12in}#sbo-rt-content .packt_figref{font-size:10pt;font-weight:normal}#sbo-rt-content q,#sbo-rt-content .packt_quote{font-size:11pt;font-weight:normal;color:black;font-style:italic}#sbo-rt-content .packt_tip{font-size:11pt;font-weight:normal;color:black;font-style:italic;background-image:url(../assets/cfea789e-9199-4571-ab96-30413ef8104e.png);background-position:left center;background-repeat:no-repeat;background-size:.6in;margin-left:20px;margin-right:20px;padding-left:.7in;min-height:.75in;}#sbo-rt-content .packt_infobox{font-size:11pt;font-weight:normal;color:black;font-style:italic;background-image:url(../assets/5a771380-02eb-4759-8e38-030f17f643b4.png);background-position:left center;background-repeat:no-repeat;background-size:.6in;margin-left:20px;margin-right:20px;padding-left:.7in;min-height:.75in;}#sbo-rt-content kbd,#sbo-rt-content .packt_action{font-family:monospace;font-size:9pt;font-weight:normal}#sbo-rt-content .packt_italics{font-size:11pt;font-weight:normal;color:black;font-style:italic}#sbo-rt-content a,#sbo-rt-content .packt_url{font-family:monospace;font-size:9pt;font-weight:normal;text-decoration:none;word-break:break-all}#sbo-rt-content var,#sbo-rt-content .packt_inlinemsgid{display:none}#sbo-rt-content p,#sbo-rt-content .packt_para{text-align:left;font-size:11pt;line-height:17px}#sbo-rt-content .underline{text-decoration:underline}#sbo-rt-content .CDPImageAlign{width:100%;display:block}#sbo-rt-content div.CDPAlign,#sbo-rt-content p.CDPAlign{width:100%;display:block;margin-top:.18in;margin-bottom:.18in}#sbo-rt-content .CDPAlignCenter{text-align:center}#sbo-rt-content .CDPAlignLeft{text-align:left}#sbo-rt-content .CDPAlignRight{text-align:right}#sbo-rt-content .fm-editor-equation{border:none}#sbo-rt-content nav a.section{border-bottom:1px solid black;width:100%;display:block}#sbo-rt-content body table{border-collapse:collapse}#sbo-rt-content body table td{border:1px solid black;padding:.31em .62em}#sbo-rt-content .header-title{font-size:2.5em}#sbo-rt-content img.inline-image{height:1em}#sbo-rt-content .chapter-title{font-size:2.5em}#sbo-rt-content h1,#sbo-rt-content .packt_head1{font-size:2em}#sbo-rt-content h2,#sbo-rt-content .packt_head2{font-size:1.5em}#sbo-rt-content h3,#sbo-rt-content .packt_head3{font-size:1.17em}#sbo-rt-content h4,#sbo-rt-content .packt_head4{font-size:1em}#sbo-rt-content code,#sbo-rt-content .packt_code,#sbo-rt-content .packt_codeblock,#sbo-rt-content pre{font-size:.8em;margin-left:1.25em;padding-left:.3em;margin-bottom:.01em}#sbo-rt-content .packt_figref{font-size:.62em}#sbo-rt-content q,#sbo-rt-content .packt_quote{font-size:.68em}#sbo-rt-content .packt_tip{font-size:.68em;background-size:2.5em;margin-left:1.25em;margin-right:1.25em;padding-left:3em;min-height:2.5em}#sbo-rt-content .packt_infobox{font-size:.68em;background-size:2.5em;margin-left:1.25em;margin-right:1.25em;padding-left:3em;min-height:2.5em}#sbo-rt-content kbd,#sbo-rt-content .packt_action{font-size:.75em}#sbo-rt-content .packt_italics{font-size:.9em}#sbo-rt-content a,#sbo-rt-content .packt_url{font-size:.7em}#sbo-rt-content p,#sbo-rt-content .packt_para{font-size:1em;line-height:1.06em}#sbo-rt-content .CDPImageAlign{max-width:100%;max-height:100%}#sbo-rt-content div.CDPAlign,#sbo-rt-content p.CDPAlign{margin-top:.01em;margin-bottom:.01em}
+    </style>
+<style type="text/css" id="font-styles">#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-size: &lt;%= font_size %&gt; !important; }</style>
+<style type="text/css" id="font-family">#sbo-rt-content, #sbo-rt-content p, #sbo-rt-content div { font-family: &lt;%= font_family %&gt; !important; }</style>
+<style type="text/css" id="column-width">#sbo-rt-content { max-width: &lt;%= column_width %&gt;% !important; margin: 0 auto !important; }</style>
+
+<style type="text/css">body{margin:1em;}#sbo-rt-content *{text-indent:0pt!important;}#sbo-rt-content .bq{margin-right:1em!important;}</style></head>
+<body><div id="sbo-rt-content"><section>
+            <header>
+                <h1>Table of Contents</h1>
+            </header>
+
+            <article>
+                <nav epub:type="toc" id="toc">
+                    <ol><li style="list-style-type:none" hidden="hidden" class="front-matter miscellaneous ">
+            <a href="d43660d7-d903-43af-ae46-b57aeb96dc73.xhtml" class="front-matter miscellaneous ">Title Page</a>
+    
+    
+</li>
+<li style="list-style-type:none" hidden="hidden" class="front-matter miscellaneous ">
+            <a href="61d4b432-dfc3-4270-b620-6524c22e856a.xhtml" class="front-matter miscellaneous ">Copyright and Credits</a>
+    
+    <ol><li style="list-style-type:none" hidden="hidden" class="">
+            <a href="3c0a7cf8-01ec-45cf-9a70-541033f549ca.xhtml" class="">Redux Quick Start Guide</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" hidden="hidden" class="front-matter miscellaneous ">
+            <a href="ad9dbdbb-f39a-46b5-98fa-80fb21135c20.xhtml" class="front-matter miscellaneous ">Dedication</a>
+    
+    
+</li>
+<li style="list-style-type:none" hidden="hidden" class="front-matter miscellaneous ">
+            <a href="e4c18c8e-ae62-40eb-989e-e36ed624d769.xhtml" class="front-matter miscellaneous ">About Packt</a>
+    
+    <ol><li style="list-style-type:none" hidden="hidden" class="">
+            <a href="21898d11-d96c-4f47-ae5c-d7d80847f0a5.xhtml" class="">Why subscribe?</a>
+    
+    
+</li>
+<li style="list-style-type:none" hidden="hidden" class="">
+            <a href="d5963fce-70b6-467b-9b3c-7f474efd6910.xhtml" class="">Packt.com</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" hidden="hidden" class="front-matter miscellaneous ">
+            <a href="8791cee9-43dd-4b86-afdd-b6e75c6216a8.xhtml" class="front-matter miscellaneous ">Contributors</a>
+    
+    <ol><li style="list-style-type:none" hidden="hidden" class="">
+            <a href="0ca2a32a-4f94-4250-902f-0527ca432cc8.xhtml" class="">About the authors</a>
+    
+    
+</li>
+<li style="list-style-type:none" hidden="hidden" class="">
+            <a href="1146a833-72d5-4a2e-9148-172e10864b36.xhtml" class="">About the reviewers</a>
+    
+    
+</li>
+<li style="list-style-type:none" hidden="hidden" class="">
+            <a href="4b4ce8fe-d108-4848-9233-ec52a2154c1b.xhtml" class="">Packt is searching for authors like you</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="front-matter preface ">
+            <a href="985ec8de-8264-40bc-acbd-90e922b908f2.xhtml" class="front-matter preface ">Preface</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="c8b0d6c7-477b-40ee-8f29-8000d147ef4a.xhtml" class="">Who this book is for</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="a6e643c6-44d2-4531-a658-58998a66192b.xhtml" class="">What this book covers</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="250f8ace-9998-4be8-a0c5-2ba5b9950bfd.xhtml" class="">To get the most out of this book</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="dad2d7ef-6132-45e4-88e6-e6efa6afcca8.xhtml" class="">Download the example code files</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="cfccabb1-17ab-4b16-a2a7-ef575660a836.xhtml" class="">Conventions used</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="b2cac140-802a-4a41-a3b3-d873b31561c1.xhtml" class="">Get in touch</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="baff31b0-ac7a-46a9-bfee-aa17d83d7a3c.xhtml" class="">Reviews</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="1" class="chapter chapter ">
+            <a href="a46d70c3-5139-4a96-aa65-d3ac62cfe92f.xhtml" class="chapter chapter ">Understanding Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="fa91b499-eb4a-4884-9524-a9e891d9ebb2.xhtml" class="">The need for Redux</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="6805043e-00c6-4e40-a7f0-867abb67c30c.xhtml" class="">Functional programming</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="ba5ccc7e-8f75-457a-8fd1-39bc3e9bae6a.xhtml" class="">Assigning functions to variables</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="83427aa6-cc2c-47b8-82f8-da29e7039ff7.xhtml" class="">Adding functions to objects and arrays</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="238e9cbf-5acb-4f0d-87ec-b012c92fe813.xhtml" class="">Functions as arguments</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="17b03855-dade-42a0-82a1-2dff4cb0bdf9.xhtml" class="">Functions returned by functions</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ed7ae715-a104-4ebd-9feb-04fd52d85e99.xhtml" class="">Higher-order functions</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="cd85f04d-1fec-4859-a319-08a1e9deb095.xhtml" class="">Pure functions</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="f152367f-f381-4d53-b7d7-01e7d3d4d075.xhtml" class="">Compositions</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="9a54cfd2-9b05-4a2a-b30d-22416937b9a7.xhtml" class="">Fundamental principles of Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="ecd5a0fa-1cbd-43ca-8098-5a71a5578af2.xhtml" class="">Single source of truth</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8493c89a-f927-43d5-a9f1-d6c6bb114afb.xhtml" class="">Read-only nature of the state</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="5de727f2-09ca-4805-a3ba-6654cde6ce91.xhtml" class="">The reducer principle &amp;#x2013; changes are made with pure functions</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="72803a72-19d4-4864-a541-61a2577bfe9c.xhtml" class="">The Redux ecosystem</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="53ec7074-29f6-43b4-b48a-219b35ce96cf.xhtml" class="">Elements of Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="5965e2ce-76ca-49e4-a4ed-5afa22a0ef69.xhtml" class="">Actions</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="313aafe8-05f1-4f5b-a9c3-860d5747112c.xhtml" class="">Action creators</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="6c27e4ac-d1ad-45e9-b8a8-c39e8f45fa97.xhtml" class="">Reducers</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="1b02456e-89d4-4ea9-a3de-3ea00b82858d.xhtml" class="">Store &amp;#xA0;</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="64a1556e-4790-4b81-ba10-1e9130d2baf4.xhtml" class="">getState()</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="cde792fe-eeac-4b02-906e-9d2bb7d3b4ca.xhtml" class="">dispatch(action)</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="613baf4b-815a-4715-84fe-c5bdf8949a9e.xhtml" class="">subscribe(listeners)</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="e503bbf6-735d-4309-9855-2fb7b57dae88.xhtml" class="">replaceReducer(nextReducer)</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="962a4c91-f233-4379-9e6a-a74431adddac.xhtml" class="">Redux life cycle</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="809e8806-5918-4f64-8962-c1af12388695.xhtml" class="">Getting started</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8ab4aeca-8dbb-4c33-a0a2-0e5ac0ee1eaf.xhtml" class="">Understanding Redux methods</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8e6f2e9e-f815-42c2-a09b-b0f99d8a7eb4.xhtml" class="">Setting up the project</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="788e55ee-cd47-4e14-abd9-11a600c1eda6.xhtml" class="">Configuring the store</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="dd06f0f1-d2fe-4d83-bde3-9cf7dcb40649.xhtml" class="">Configuring the root reducer</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="2a9ecbb9-2417-4cc5-9e25-d4a88d2fbb73.xhtml" class="">Configuring our app with Redux</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="11b57987-2425-4238-9905-1ae7e6ccff65.xhtml" class="">Creating utilities</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7a2b206b-4379-4061-b145-22bc4d9e165a.xhtml" class="">Creating the first container</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="14bb82b4-e2b7-4505-a465-74687e7f623b.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="de8bda8b-ed98-4ebe-8bae-85c155332183.xhtml" class="">Further study</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="2" class="chapter chapter ">
+            <a href="f0ae2d58-7671-4ee1-91ff-19b3f5218ac3.xhtml" class="chapter chapter ">Testing</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="7c5dd78e-9ccb-40cc-9518-b273f6e43d3c.xhtml" class="">Setting up Jest</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="578115fe-b585-45d6-a2ba-7aa23f137ee3.xhtml" class="">Testing ES6 functions</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="e4fdde14-5495-4fe7-8be0-182cc4b84028.xhtml" class="">Testing a function</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="f3ed5de0-cdd3-4c6a-834d-0abfe1b4e0f6.xhtml" class="">A general testing scenario</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="6a0652e3-4071-4d45-b2ac-deb7f101fa85.xhtml" class="">Time mocks</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="bc659536-5692-43ed-b122-b87752824663.xhtml" class="">Testing React components</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="274ad20c-a6ea-43b3-b2a1-70a3b9b0060a.xhtml" class="">React components and mocking components</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="3d804d4e-9049-4996-ae6d-a7226d27dc4e.xhtml" class="">Multiple React components</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="868865c2-89af-48df-b5f3-87e6d19fb0cc.xhtml" class="">Testing event handlers</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="a25019c4-3e29-4047-83cd-779469c6c802.xhtml" class="">Testing Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="f214efa8-0a8a-46e7-8d7e-7d2216907ba3.xhtml" class="">Testing action creators</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="be733fe2-c2a9-493d-81f8-c33f98603e52.xhtml" class="">Testing reducers</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="e1b73ab9-a8ba-450e-a830-21bc6ad69d91.xhtml" class="">Higher-order functions</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="34dfe423-2538-42ec-8ba0-9571ea48622c.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7f83fbee-0289-432d-b410-18e3d7a98da8.xhtml" class="">Further reading</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="3" class="chapter chapter ">
+            <a href="8a649b26-ca80-42de-b863-ba63d6a96915.xhtml" class="chapter chapter ">Routing</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="44433b97-10e0-449c-985a-25e149e427e3.xhtml" class="">Using react-router-dom</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="627ec0c5-fa9a-4596-83dc-1c7f311a8d01.xhtml" class="">Understanding route props</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="57d39323-cd0c-4334-970e-9bb99a1f71e4.xhtml" class="">The Redirect component</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="19cbede5-caa1-4575-8f3b-a0db693b3314.xhtml" class="">Using connected-react-router</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="aabc4b6d-4e29-48c0-b79d-0fe9921cefa7.xhtml" class="">History</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="900508c8-e4f9-41f1-9122-da16dee2606b.xhtml" class="">Mocking react-router-dom for testing</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ac27790f-4968-4b7e-a30e-1d9a0e8445c4.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="1410b2d3-0a79-427f-831b-bd1fb4957839.xhtml" class="">Further reading</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="4" class="chapter chapter ">
+            <a href="1c7ddbcd-e0b6-421c-8e8a-b4da4b85cf64.xhtml" class="chapter chapter ">The Concept of Immutability</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="ca20e09b-fbc0-432f-bde6-9ba27588c64b.xhtml" class="">The need for immutability</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="5e0833d5-04c8-4a47-b909-48c9dd262ff8.xhtml" class="">The data reference problem</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="c7ee3e1d-2675-47c9-ac0a-7a822c78d805.xhtml" class="">Reference handling</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="e3a6da80-5a23-4a2e-bd7d-4461f3b64625.xhtml" class="">Getting started with Immutable JS</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="2dbf651c-b99a-465c-8f04-50b55e2b4868.xhtml" class="">Components of Immutable JS</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="0f3b41fa-f39e-4b26-a423-76d45a14e1e5.xhtml" class="">FromJS</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="549da7b0-af84-4476-9946-655bd2a5e6f7.xhtml" class="">Map</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7b342237-78d2-4586-82a7-bf6e37834af7.xhtml" class="">List</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="756c1b44-878b-4d40-a4c0-757c2da5356b.xhtml" class="">Set</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="17040f66-3693-4b3a-943d-3131d1aff2ac.xhtml" class="">The TODO app</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="4b5132fa-5a8a-4972-8b05-fd6d95866045.xhtml" class="">Components</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="5c81c8ca-c2c4-47b1-8017-4924595f153b.xhtml" class="">Reducers</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="0e68dc23-be75-49c4-b010-26ef4495adec.xhtml" class="">Connecting with Redux</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="9444b3f4-7131-4606-99a3-59088bb02171.xhtml" class="">Using Immutable JS in our project</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="b7a37bf9-6cba-487f-9714-228f77b0e314.xhtml" class="">The Immutable JS ecosystem</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="53727720-949b-4f60-9da5-3ade5adab38d.xhtml" class="">Frequently asked questions</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7b7f7609-13ab-44a4-9510-02058429f346.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="468e7c7c-f36b-4c92-b37c-108c9f41173f.xhtml" class="">Further reading</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="5" class="chapter chapter ">
+            <a href="6ece34d6-d944-4f1f-9f2f-59469c3aee4e.xhtml" class="chapter chapter ">React with Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="7f26657b-4cdc-4fa0-9a0a-dd835bcfed5f.xhtml" class="">Components of React</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="5fba068a-6903-4b6c-b738-1e3e444d303d.xhtml" class="">Principles of React</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="a20989a8-b325-428c-ade1-ba42f6f587af.xhtml" class="">New in React 16.8</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="aea32c32-216b-432e-80ba-d13a9e1ad281.xhtml" class="">New features with React 16.8</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ff1e5d60-15ff-4253-b938-d04a923d42e6.xhtml" class="">User interfaces</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ff726422-eb08-4540-a9d8-f39ea3bffdf2.xhtml" class="">Project structure</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="1c4f2a38-e23a-4fbd-a68d-162cc9c51d17.xhtml" class="">React component libraries</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="b5bfd00a-a8f4-47af-be87-57fa3c6a94c5.xhtml" class="">Antd</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="2ff24df6-97aa-4d2c-b978-75c0f7e5655b.xhtml" class="">styled-component</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="264a90ec-26b9-4aa1-8b07-67a29e16bc5e.xhtml" class="">Redux form</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="9df9455b-b11b-4fd3-9465-77298d8f3199.xhtml" class="">containers/App/index.js</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="4784c279-6e8f-4d81-834b-67da20048d9e.xhtml" class="">Login page</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8c9bdfe6-327b-4d7b-916f-bd04ce46ab2c.xhtml" class="">Register page</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8950006e-e07d-41a3-b9f6-ea04a8a3ce20.xhtml" class="">Users pages</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="fb25f2a7-ac0d-4714-ace8-c2f72b299370.xhtml" class="">Listing all of the users</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="91f9589a-b4a2-4f59-9e18-e7a9ea9347aa.xhtml" class="">Adding a new user page</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="512eaf81-6de8-4679-b91b-989016e76be2.xhtml" class="">Connecting with Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="b95ad2d2-7d8c-43dc-bd38-60b2a8b02cce.xhtml" class="">Action types</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="0be5203a-a749-4c00-8e03-373ae307a438.xhtml" class="">Connecting with Redux</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="33020afd-f3d1-4679-a38c-46c686eeed13.xhtml" class="">Connecting the login page with Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="1c6ac57e-4a48-4f4a-a026-83425a5c4b90.xhtml" class="">Action creators</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="35f4322e-0919-4cb6-b3c6-c7dcff101813.xhtml" class="">Constant</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="a5d93b01-0b40-42c2-a3ad-40e425649693.xhtml" class="">Connect</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="670f69a5-2834-4c57-974f-68083dcd209f.xhtml" class="">Connecting an add user page to Redux</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="33448d1c-318f-4fb2-b384-210a394d736d.xhtml" class="">Login page reducer</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="30b59cd9-3889-4a9b-924d-2b7f57c76b3b.xhtml" class="">Understanding selectors</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="ffc0d559-7235-47a7-988c-f243f0e3ec9e.xhtml" class="">Why selectors?</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="2615c388-75bf-4e31-b0a6-58f2aad0fdc2.xhtml" class="">reselect</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="720fdf9d-7526-4f26-81ac-0be7f2d22628.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="c22dcd17-c08d-4fc4-844f-635abbdcbc28.xhtml" class="">Further study</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="6" class="chapter chapter ">
+            <a href="15bbf065-c5aa-499f-8176-a1d7650345b4.xhtml" class="chapter chapter ">Extending Redux with Middleware</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="a16b175e-0e7c-4c81-8a1a-c9f14366a24d.xhtml" class="">Exploring middleware</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ca2a1325-ea62-44f7-8f1a-30e0a32914bb.xhtml" class="">Router middleware</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="204649be-c6f3-4542-aac5-9aed9f74e4f9.xhtml" class="">redux-saga middleware</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="7653b034-28e8-4354-a03f-a107e58161f4.xhtml" class="">Getting started</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="2b978d55-3974-4f9d-954a-b07d12ba2d73.xhtml" class="">Adding Saga to the application</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="a01c64c9-c2c8-4657-a8f6-2d62c1c55608.xhtml" class="">Connecting the Saga middleware to the store</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="44483904-0fd2-4b11-a86b-9df4705bb17d.xhtml" class="">Using the REST API</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="76ef814e-d9f8-4ae7-b2a1-edea164eccc5.xhtml" class="">Prerequisites</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="9907f7ee-0fd9-46fa-a28d-b6469a49f0a0.xhtml" class="">Seeding users</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="b753e161-9e97-49af-84e6-2b4b1ea4f70a.xhtml" class="">Seeding doctors</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="0c325765-93be-402d-80a0-436b899f786d.xhtml" class="">Seeding admin</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="be774568-3130-4a44-b4b4-c8e32e2be480.xhtml" class="">Connecting the login functionality with the API</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="25231d7f-c315-4547-8c7d-73ec64737eb3.xhtml" class="">Creating Saga</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="59a536b7-0185-4ac0-ab08-aa31686b15a9.xhtml" class="">Passing the subset of the state to a component</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="e2f2cebf-7054-4bee-b74f-7dd46094dda1.xhtml" class="">Connecting the home page with the API</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="4784aa57-005c-4021-b4de-ec04ec616b7f.xhtml" class="">CRUD on users</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="05cfa7bb-1ee4-4e80-8f1a-684a674a493a.xhtml" class="">Defining Saga</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="1364c6aa-0737-49ea-9cdc-81ae8b1760de.xhtml" class="">Language middleware</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7aadefd6-42a6-4876-928f-f9467e8044db.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="33cf17e0-082d-4a32-9a0f-bd780e1b8a41.xhtml" class="">Further study</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="7" class="chapter chapter ">
+            <a href="2dcdee16-1067-4b33-808c-00f08904ac09.xhtml" class="chapter chapter ">Debugging Redux</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="71946f0a-5fc1-47e9-bb0f-05bc21e8b429.xhtml" class="">Integrating Redux DevTools</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="02e7232b-0b11-43c4-bae4-800ba4a39d95.xhtml" class="">Installing Redux DevTools</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="7c6e2717-4621-4025-bb59-c4bf336f1e9c.xhtml" class="">Redux DevTools extension</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="f12d3893-d733-479b-afaa-dd47a2bfd5a3.xhtml" class="">Understanding Redux DevToolsHMR</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="bb7e3599-d323-4041-8b32-8a29c4eefe71.xhtml" class="">Replacing the hot module</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="924390c8-88f6-408c-b566-c2a2315611c5.xhtml" class="">Loading the hot module</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="e289098d-9bdb-435e-9fe3-1296185e8fb6.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="5ddb15b0-d92b-470f-9472-88f553d26e0f.xhtml" class="">Further reading</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:decimal" value="8" class="chapter chapter ">
+            <a href="3cf5e84b-d784-4603-afe2-06e271f1df4d.xhtml" class="chapter chapter ">Understanding the REST API</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="f396fd18-f115-4b8d-a154-9231ddbb3a63.xhtml" class="">The REST principle</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="0e791ec1-cc82-4fae-8be9-49f1ccd07c76.xhtml" class="">The HTTP verbs and HTTP response status code</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="ad5e8839-e649-4621-a0e7-94ce6d60d842.xhtml" class="">Project structure</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="14a54f87-8eb0-4c3f-8ac6-70a3e3a76c1e.xhtml" class="">Seeding users</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="713d424b-8355-4991-bcc3-cff79696db08.xhtml" class="">User endpoints</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="d36f2d43-d365-40c0-8927-361e1dbfb83c.xhtml" class="">POST &amp;#x2013;&amp;#xA0;Creating a user</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="376955d0-9524-43ea-b2cb-5ef7f2409159.xhtml" class="">GET&amp;#xA0;&amp;#x2013; List of users</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="f2517505-eb39-4b84-978a-6e63228bed2a.xhtml" class="">Authentication and authorization</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="a938a277-3e44-4da6-9a74-ac1a9900245e.xhtml" class="">Authentication</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="c94f95be-b75a-4908-8d04-42d2fc28c0b0.xhtml" class="">Authorization</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="9ceb80a0-f244-45b4-8004-505cdf5fcc67.xhtml" class="">Getting a single user information</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="de250f0a-4380-4402-ad15-5db814098ad0.xhtml" class="">Updating user information</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="">
+            <a href="b84d505b-5e03-481f-a002-d4c6391aaf41.xhtml" class="">Other endpoints</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="8f8c21af-c768-4121-bea6-22a7e7263bd1.xhtml" class="">Summary</a>
+    
+    
+</li>
+<li style="list-style-type:none" class="">
+            <a href="833f844c-4d77-4890-9e3a-e784a3206d8a.xhtml" class="">Further reading</a>
+    
+    
+</li>
+</ol>
+</li>
+<li style="list-style-type:none" class="back-matter miscellaneous ">
+            <a href="1e43b079-16ad-41ae-9357-e9df8a0a943b.xhtml" class="back-matter miscellaneous ">Other Books You May Enjoy</a>
+    
+    <ol><li style="list-style-type:none" class="">
+            <a href="9c1ee71d-b798-471f-953c-f433d671b9d5.xhtml" class="">Leave a review - let other readers know what you think</a>
+    
+    
+</li>
+</ol>
+</li>
+</ol>
+                </nav>
+            </article>
+
+            <footer style="margin-top: 5em;"/>
+        </section>
+    </div>
+
+
+
+  </body>
+</html>
